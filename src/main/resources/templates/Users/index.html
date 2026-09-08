@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuários</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+<div class="container pt-3">
+
+    <a type="button" class="btn btn-outline-primary float-end" data-bs-toggle="button">Novo Usuário</a>
+
+    <h1>
+        Total de usuários: (<span th:text="${size}"></span>)
+    </h1>
+
+    <hr>
+
+    <table class="table">
+
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Arroba</th>
+            <th scope="col">CPF</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <tr th:each="user : ${users}">
+
+            <th scope="row" th:text="${user.id}">#</th>
+
+            <td th:text="${user.name}">#</td>
+
+            <td th:text="${user.arroba}">#</td>
+
+            <td th:text="${user.cpf}">#</td>
+
+        </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYJwR5cXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+</script>
+
+</body>
+</html>
