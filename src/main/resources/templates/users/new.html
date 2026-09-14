@@ -34,7 +34,6 @@
           th:action="@{/user/create}"
           th:object="${user}">
 
-        <!-- Nome -->
         <div class="mb-3">
             <label for="name" class="form-label">
                 Nome
@@ -47,7 +46,6 @@
                    placeholder="Digite seu nome">
         </div>
 
-        <!-- Arroba -->
         <div class="mb-3">
             <label for="arroba" class="form-label">
                 @
@@ -60,7 +58,6 @@
                    placeholder="@seuusuario">
         </div>
 
-        <!-- CPF -->
         <div class="mb-3">
             <label for="cpf" class="form-label">
                 CPF
@@ -71,7 +68,6 @@
                    id="cpf"
                    th:field="*{cpf}"
                    placeholder="000.000.000-00"
-                   maxlength="14">
         </div>
 
         <button type="submit" class="btn btn-primary">
