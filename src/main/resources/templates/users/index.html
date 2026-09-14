@@ -20,7 +20,7 @@
 
 <div class="container pt-3">
 
-    <a type="button" class="btn btn-outline-primary float-end" data-bs-toggle="button">Novo Usuário</a>
+    <a th:href="@{'/user/new'}" class="btn btn-outline-primary float-end">Novo Usuário</a>
 
     <h1>
         Total de usuários: (<span th:text="${size}"></span>)

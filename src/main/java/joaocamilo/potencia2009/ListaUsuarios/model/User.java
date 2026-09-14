@@ -5,9 +5,9 @@ public class User {
     private Long id;
     private String name;
     private String Arroba;
-    private int cpf;
+    private String cpf;
 
-    public User(Long id, String name, String arroba, int cpf) {
+    public User(Long id, String name, String arroba, String cpf) {
         this.id = id;
         this.name = name;
         this.Arroba = arroba;
@@ -35,10 +35,10 @@ public class User {
     public void setArroba(String arroba) {
         this.Arroba = arroba;
     }
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 }
