@@ -4,13 +4,13 @@ public class User {
 
     private Long id;
     private String name;
-    private String Arroba;
+    private String arroba;
     private String cpf;
 
     public User(Long id, String name, String arroba, String cpf) {
         this.id = id;
         this.name = name;
-        this.Arroba = arroba;
+        this.arroba = arroba;
         this.cpf = cpf;
     }
 
@@ -30,10 +30,10 @@ public class User {
         this.name = name;
     }
     public String getArroba() {
-        return Arroba;
+        return arroba;
     }
     public void setArroba(String arroba) {
-        this.Arroba = arroba;
+        this.arroba = arroba;
     }
     public String getCpf() {
         return cpf;

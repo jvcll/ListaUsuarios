@@ -36,6 +36,7 @@
             <th scope="col">Nome</th>
             <th scope="col">Arroba</th>
             <th scope="col">CPF</th>
+            <th scope="col">Ações</th>
         </tr>
         </thead>
 
@@ -50,6 +51,9 @@
             <td th:text="${user.arroba}">#</td>
 
             <td th:text="${user.cpf}">#</td>
+            <td>
+                <a th:href="@{|/user/show/${user.id}|}"></a>
+            </td>
 
         </tr>
 
