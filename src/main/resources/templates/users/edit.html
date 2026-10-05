@@ -8,10 +8,10 @@
 </head>
 <body>
 <div class="container pt-3">
-    <a th:href="@{'/users/index'}" class="btn btn-primary float-end">Voltar</a>
+    <a th:href="@{'/user/index'}" class="btn btn-primary float-end">Voltar</a>
     <h1> Editar Usuário (<span th:text="${user.getName()}"></span>)</h1>
     <hr>
-    <form method="post" th:action=" @{|/users/update/${user.id}|}" th:object="${user}">
+    <form method="post" th:action=" @{|/user/update/${user.id}|}" th:object="${user}">
         <input th:if="${user.id != null}" type="hidden" name="_method" value="put" />
         <div class="mb-3">
             <label for="name" class="form-label">Nome</label>

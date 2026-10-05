@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container pt-3">
-    <a th:href="@{'/users/index'}" class="btn btn-secondary float-end">Voltar para Lista</a>
+    <a th:href="@{'/user/index'}" class="btn btn-secondary float-end">Voltar para Lista</a>
     <h1>Detalhes do Usuário</h1>
     <hr>
 
@@ -36,10 +36,10 @@
         </div>
         <div class="card-footer d-flex gap-2">
             <!-- Botão de Editar -->
-            <a th:href="@{|/users/edit/${user.id}|}" class="btn btn-primary">
+            <a th:href="@{|/user/edit/${user.id}|}" class="btn btn-primary">
                 <i class="bi bi-pencil"></i> Editar
             </a>
-            <a th:href="@{|/users/delete/${user.id}|}" class="btn btn-primary">
+            <a th:href="@{/user/delete/{id}(id=${user.id})}" class="btn btn-danger">
                 <i class="bi bi-trash"></i> Excluir
             </a>
         </div>

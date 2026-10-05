@@ -50,7 +50,7 @@ public class UserController {
         userEdit.setArroba(user.getArroba());
         userEdit.setCpf(user.getCpf());
         model.addAttribute("user", user);
-        return "redirect:/user/show";
+        return "redirect:/user/show/" + id;
     }
 
     @GetMapping("/show/{id}")
@@ -60,7 +60,7 @@ public class UserController {
         model.addAttribute("user", userShow);
         return "/users/show";
     }
-    @PostMapping("/delete/{id}")
+    @GetMapping("/delete/{id}")
     public String deleteUser(@PathVariable Long id, ModelMap model){
         int idInt = Math.toIntExact(id - 1L);
         listUser.remove(idInt);
